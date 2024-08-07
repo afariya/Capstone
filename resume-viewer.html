@@ -61,19 +61,19 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#skills">Autobiography</a>
+                    <a class="nav-link" href="resume-viewer.html?pdf=doc/Clarison Kiptiken Autobiography.pdf">Autobiography</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#projects">Presentations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#projects">Essay</a>
+                    <a class="nav-link" href="resume-viewer.html?pdf=doc/PHOTOGRAPGHIC esay.pdf">Essay</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#projects">Videos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Online platforms</a>
+                    <a class="nav-link" href="resume-viewer.html?pdf=doc/EVIDENCE FOR MY ONLINE PLATFORM ACCOUNTS.pdf">Online platforms</a>
                 </li>
             </ul>
         </div>
@@ -102,18 +102,26 @@
             // Function to highlight the active resume link
             function highlightActiveLink() {
                 if (pdfUrl) {
+
+                    document.querySelectorAll('.navbar-nav .nav-link').forEach(item => {
+                        item.classList.remove('active');
+                    });
+
                     // Remove active class from all links
                     document.querySelectorAll('.dropdown-item').forEach(item => {
                         item.classList.remove('active');
                     });
-
+        
                     // Add active class to the corresponding link
                     if (pdfUrl.includes('doc/clarrison RESUME.pdf')) {
                         document.getElementById('resumeEnglish').classList.add('active');
+                        document.querySelector('.nav-link[href="resume.html"]').classList.add('active');
                     } else if (pdfUrl.includes('doc/kiwahili RESUME.pdf')) {
                         document.getElementById('resumeKiswahili').classList.add('active');
+                        document.querySelector('.nav-link[href="resume.html"]').classList.add('active');
                     } else if (pdfUrl.includes('doc/Kalenjin.pdf')) {
                         document.getElementById('resumeIndigenous').classList.add('active');
+                        document.querySelector('.nav-link[href="resume.html"]').classList.add('active');
                     }
                 }
             }
