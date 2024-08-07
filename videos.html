@@ -3,41 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Viewer</title>
+    <title>Videos</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .pdf-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            height: 100vh;
-        }
-        .pdf-viewer {
-            width: 100%;
-            max-width: 800px; /* Limit width for better viewing experience */
-            height: 100vh;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        embed {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-        }
-
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -47,7 +15,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -76,7 +44,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="resume-viewer.html?pdf=doc/PHOTOGRAPGHIC esay.pdf">Essay</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="videos.html">Videos</a>
                 </li>
                 <li class="nav-item">
@@ -86,16 +54,51 @@
         </div>
     </nav>
 
-    <div class="pdf-container">
-        <div class="pdf-viewer">
-            <embed id="pdfEmbed" type="application/pdf">
-        </div>
+    <div class="container mt-5">
+        <section id="videos" class="text-center py-5">
+            <h2 class="mb-4">Videos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://drive.google.com/file/d/1KfHtiVF7yhg_j9TFGGXTLbEYDivP9LvL/preview" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Invention or Innovation in the Field of Study</h5>
+                            <p class="card-text">A twenty (20) minute video presentation (accompanied by an abstract in KiSwahili, English, and one indigenous African language) on any invention or innovation in my field of study.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://drive.google.com/file/d/1zdDazaXP7iWs_VmvD41pD0poYhX5-mI9/preview" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Importance of African Culture</h5>
+                            <p class="card-text">A twenty (20) minute video presentation (accompanied by an abstract in KiSwahili, English, and one indigenous African language) on any aspect of African culture demonstrating its importance, including a discussion on the importance of gender awareness in African society.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://drive.google.com/file/d/1HNPXucCJnjNwlX23qz00xv6Fe6szG-Bo/preview" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Challenges Facing Modern Society</h5>
+                            <p class="card-text">A twenty (20) minute video presentation (accompanied by an abstract in KiSwahili, English, and one indigenous African language) on any challenge(s) facing modern society and my suggested solution to this/these challenge(s).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <footer class="text-center mt-5 py-4">
         <p>&copy; 2024 Clarrison Kiptiken. All Rights Reserved.</p>
     </footer>
-<script src="js/script.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
